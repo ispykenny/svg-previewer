@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "on"
+  },
+  "extensions": {
+    "recommendations": ["ms-vscode.vscode-typescript-next"]
+  }
+}

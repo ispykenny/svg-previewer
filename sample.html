@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Previewer Test</title>
+  </head>
+  <body>
+    <h1>SVG Previewer Test</h1>
+
+    <h2>Complete SVG Elements</h2>
+
+    <!-- Hover over this SVG to see a preview -->
+    <svg width="100" height="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="black"
+        stroke-width="3"
+        fill="red"
+      />
+    </svg>
+
+    <!-- Another SVG example -->
+    <svg width="120" height="80">
+      <rect
+        width="100"
+        height="60"
+        fill="blue"
+        stroke="black"
+        stroke-width="2"
+      />
+      <text x="50" y="35" text-anchor="middle" fill="white">Hello</text>
+    </svg>
+
+    <!-- Complex SVG with multiple elements -->
+    <svg width="150" height="100">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop
+            offset="0%"
+            style="stop-color: rgb(255, 255, 0); stop-opacity: 1"
+          />
+          <stop
+            offset="100%"
+            style="stop-color: rgb(255, 0, 0); stop-opacity: 1"
+          />
+        </linearGradient>
+      </defs>
+      <ellipse cx="75" cy="50" rx="60" ry="30" fill="url(#grad1)" />
+      <polygon points="75,20 85,40 65,40" fill="green" />
+    </svg>
+
+    <h2>Standalone SVG Elements</h2>
+
+    <!-- These individual elements will be wrapped in an SVG container for preview -->
+    <circle cx="50" cy="50" r="30" fill="purple" />
+
+    <rect x="10" y="10" width="80" height="40" fill="orange" stroke="black" />
+
+    <path
+      d="M10 80 Q 50 10 90 80"
+      stroke="brown"
+      stroke-width="3"
+      fill="none"
+    />
+
+    <line x1="10" y1="20" x2="90" y2="20" stroke="red" stroke-width="2" />
+
+    <polyline
+      points="10,60 30,40 50,60 70,40 90,60"
+      fill="none"
+      stroke="blue"
+      stroke-width="2"
+    />
+
+    <polygon points="50,10 60,30 40,30" fill="green" />
+
+    <ellipse cx="75" cy="75" rx="20" ry="10" fill="pink" />
+
+    <text x="50" y="95" text-anchor="middle" fill="black">Sample Text</text>
+
+    <h2>SVG with Groups</h2>
+
+    <svg width="200" height="100">
+      <g transform="translate(10,10)">
+        <rect width="50" height="30" fill="lightblue" />
+        <circle cx="25" cy="15" r="8" fill="darkblue" />
+      </g>
+      <g transform="translate(80,10)">
+        <rect width="50" height="30" fill="lightgreen" />
+        <polygon points="25,5 30,20 20,20" fill="darkgreen" />
+      </g>
+    </svg>
+
+    <h2>SVG with Use Element</h2>
+
+    <svg width="200" height="100">
+      <defs>
+        <circle
+          id="myCircle"
+          cx="20"
+          cy="20"
+          r="15"
+          fill="yellow"
+          stroke="black"
+        />
+      </defs>
+      <use href="#myCircle" x="10" y="10" />
+      <use href="#myCircle" x="60" y="10" />
+      <use href="#myCircle" x="110" y="10" />
+    </svg>
+  </body>
+</html>

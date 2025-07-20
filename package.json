@@ -1,0 +1,79 @@
+{
+  "name": "svg-previewer",
+  "displayName": "SVG Previewer Pro",
+  "description": "Preview SVG markup on hover with background color controls and currentColor support",
+  "version": "0.0.1",
+  "publisher": "SvgPreview",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "svg",
+    "preview",
+    "hover",
+    "visualization",
+    "web",
+    "currentColor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/svg-previewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/svg-previewer/issues"
+  },
+  "homepage": "https://github.com/yourusername/svg-previewer#readme",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "svg-previewer.hello",
+        "title": "Hello SVG Previewer"
+      },
+      {
+        "command": "svg-previewer.showPreview",
+        "title": "Show SVG Preview"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "svg-previewer.showPreview",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vscode/vsce": "^3.6.0",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "vscode-test": "^0.0.1"
+  }
+}

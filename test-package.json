@@ -1,0 +1,19 @@
+{
+  "name": "test-extension",
+  "displayName": "Test Extension",
+  "description": "A simple test extension",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "activationEvents": ["*"],
+  "main": "./test-extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "test.hello",
+        "title": "Test Hello"
+      }
+    ]
+  }
+}
