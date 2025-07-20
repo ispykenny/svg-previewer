@@ -21,12 +21,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/svg-previewer.git"
+    "url": "https://github.com/ispykenny/svg-previewer.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/svg-previewer/issues"
+    "url": "https://github.com/ispykenny/svg-previewer/issues"
   },
-  "homepage": "https://github.com/yourusername/svg-previewer#readme",
+  "homepage": "https://github.com/ispykenny/svg-previewer#readme",
   "activationEvents": [
     "onStartupFinished"
   ],
